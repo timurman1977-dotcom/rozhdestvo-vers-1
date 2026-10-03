@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Рождественская сказка в 3 странах Европы | Авторский тур «Турсалон»</title>
+  <meta name="description" content="Эксклюзивный авторский тур в мини-группе 12–20 декабря: Швейцария, Франция, Нидерланды за 9 дней на скоростных поездах TGV и Eurostar. Лицензированный туроператор «Турсалон» (Астана, с 2007 года).">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Google Fonts: Playfair Display / Cormorant Garamond for luxury titles + Montserrat for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              tealDark: '#062428',
+              tealDeep: '#0A3A40',
+              tealCard: 'rgba(10, 58, 64, 0.65)',
+              amber: '#FF9E1B',
+              amberDeep: '#E68A00',
+              gold: '#D4AF37',
+              goldLight: '#F5E6A3',
+              moonLight: '#F7F4EE',
+              waGreen: '#25D366',
+              waHover: '#20ba59'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
+            display: ['"Cormorant Garamond"', 'serif'],
+            sans: ['Montserrat', 'system-ui', 'sans-serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'floating 4s ease-in-out infinite',
+            'glow': 'goldGlow 2.5s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 2.2s infinite'
+          },
+          keyframes: {
+            floating: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            },
+            goldGlow: {
+              '0%': { boxShadow: '0 0 15px rgba(230, 138, 0, 0.35)' },
+              '100%': { boxShadow: '0 0 30px rgba(255, 158, 27, 0.7)' }
+            },
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Luxury & Glass Styles */
+    body {
+      background-color: #062428;
+      color: #F7F4EE;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Festive Lights / Aurora Backdrop */
+    .ambient-aurora {
+      background: radial-gradient(circle at 50% -10%, rgba(255, 158, 27, 0.18) 0%, rgba(10, 58, 64, 0.4) 40%, rgba(6, 36, 40, 0) 70%),
+                  radial-gradient(circle at 10% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 90% 60%, rgba(10, 58, 64, 0.6) 0%, transparent 60%);
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: rgba(10, 58, 64, 0.45);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    
+    .glass-card-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      background: rgba(10, 58, 64, 0.65);
+      border-color: rgba(255, 158, 27, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(230, 138, 0, 0.15);
+    }
+
+    .glass-gold-card {
+      background: linear-gradient(145deg, rgba(255, 158, 27, 0.12) 0%, rgba(10, 58, 64, 0.65) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 158, 27, 0.35);
+    }
+
+    /* Text Gradients */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5E6A3 45%, #FF9E1B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-amber-gradient {
+      background: linear-gradient(135deg, #FF9E1B 0%, #E68A00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Custom subtle snowflakes */
+    .snow-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .snowflake {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 14px;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Accordion transitions */
+    .faq-answer, .day-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease;
+      opacity: 0;
+    }
+    .faq-answer.open, .day-details.open {
+      max-height: 600px;
+      opacity: 1;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #062428;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0A3A40;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 158, 27, 0.3);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF9E1B;
+    }
+  </style>
+</head>
+<body class="relative selection:bg-brand-amber selection:text-brand-tealDark pb-20 md:pb-0">
+
+  <!-- Ambient Golden and Teal Radial Backdrops -->
+  <div class="fixed inset-0 ambient-aurora pointer-events-none -z-10"></div>
+  <div class="fixed -top-40 -left-40 w-96 h-96 bg-brand-amber/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/2 -right-40 w-[500px] h-[500px] bg-brand-tealDeep/50 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+  <!-- Subtle Festive Snow Canvas / Overlay -->
+  <div class="snow-container" id="snowContainer" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       СЕКЦИЯ 1: HEADER (Sticky Glass Navigation)
+       ======================================================================== -->
+  <header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#062428]/95 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
+      
+      <!-- Brand & Canonical Info (Left) -->
+      <a href="#" class="flex items-center space-x-2.5 sm:space-x-3.5 group flex-shrink-0 min-w-0">
+        <!-- [IMAGE_LOGO] Фирменный логотип «Турсалон» -->
+        <div class="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full p-0.5 bg-gradient-to-tr from-brand-amber to-brand-gold/60 shadow-md">
+          <img 
+            src="images/logo.png" 
+            alt="Логотип «Турсалон» — глобус и самолёт" 
+            data-asset="[IMAGE_LOGO]"
+            class="w-full h-full object-contain rounded-full bg-[#062428]"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%23FF9E1B\'><circle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%230A3A40\' stroke=\'%23FF9E1B\' stroke-width=\'3\'/><text x=\'50\' y=\'55\' text-anchor=\'middle\' fill=\'%23FFF\' font-family=\'sans-serif\' font-size=\'14\' font-weight=\'bold\'>ТУРСАЛОН</text></svg>';"
+          >
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="font-sans font-black text-base sm:text-xl tracking-tight whitespace-nowrap uppercase">
+              <span class="text-[#E11D48]">ТУР</span><span class="text-[#0084FF]">САЛОН</span>
+            </span>
+            <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-brand-amber/15 text-brand-amber border border-brand-amber/30 rounded-full whitespace-nowrap">
+              с 2007 года
+            </span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-brand-moonLight/70 font-medium leading-tight whitespace-nowrap">
+            Астана · 19 лет безупречной репутации
+          </p>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links (Desktop) - strictly single-line nowrap -->
+      <nav class="hidden xl:flex items-center gap-5 text-xs font-semibold uppercase tracking-wider text-brand-moonLight/80 flex-shrink-0">
+        <a href="#why-us" class="hover:text-brand-amber transition-colors whitespace-nowrap">Почему мы</a>
+        <a href="#route" class="hover:text-brand-amber transition-colors whitespace-nowrap">Карта</a>
+        <a href="#program" class="hover:text-brand-amber transition-colors whitespace-nowrap">Программа</a>
+        <a href="#expert" class="hover:text-brand-amber transition-colors whitespace-nowrap">Эксперт</a>
+        <a href="#pricing" class="hover:text-brand-amber transition-colors whitespace-nowrap">Стоимость</a>
+        <a href="#faq" class="hover:text-brand-amber transition-colors whitespace-nowrap">FAQ</a>
+      </nav>
+
+      <!-- Right Contact & CTA -->
+      <div class="flex items-center space-x-2 sm:space-x-5 flex-shrink-0">
+        <!-- Address with strict офис 20 and whitespace-nowrap -->
+        <div class="hidden md:flex flex-col text-right leading-tight flex-shrink-0">
+          <span class="text-[11px] text-brand-moonLight/60 font-medium whitespace-nowrap">г. Астана, БЦ «Бурлин»</span>
+          <span class="text-xs text-white font-semibold flex items-center justify-end gap-1 mt-0.5 whitespace-nowrap">
+            <svg class="w-3.5 h-3.5 text-brand-amber flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span class="whitespace-nowrap font-bold">пр. Сарыарка 17, офис 20</span>
+          </span>
+        </div>
+
+        <!-- Strict WhatsApp Direct Link (non-wrapping pill) -->
+        <a 
+          href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="relative inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full bg-brand-waGreen hover:bg-brand-waHover text-white text-xs sm:text-sm font-bold shadow-lg shadow-brand-waGreen/25 transition-all duration-200 active:scale-95 min-h-[38px] sm:min-h-[44px] whitespace-nowrap flex-shrink-0"
+        >
+          <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+          </svg>
+          <span class="hidden md:inline font-bold">WhatsApp: +7 777 279 69 62</span>
+          <span class="md:hidden font-bold">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         СЕКЦИЯ 2: HERO-BLOCK (The Grand Slam Dream Outcome)
+         ======================================================================== -->
+    <section class="relative pt-8 pb-14 md:pt-20 md:pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Urgency & Exclusivity Badge -->
+          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full bg-brand-amber/10 border border-brand-amber/35 text-brand-amber text-[10px] sm:text-sm font-bold tracking-wide uppercase shadow-lg shadow-brand-amber/10 mb-4 sm:mb-6 animate-pulse-slow max-w-full text-center leading-tight">
+            <span>🎄</span>
+            <span>ЭКСКЛЮЗИВНЫЙ АВТОРСКИЙ ТУР В МИНИ-ГРУППЕ | 12–20 ДЕКАБРЯ</span>
+          </div>
+
+          <!-- Main H1 Offer -->
+          <h1 class="font-serif text-[24px] xs:text-[27px] sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.2] sm:leading-[1.15] mb-4 sm:mb-6">
+            Рождественская сказка в 3 странах Европы <br class="hidden sm:inline">
+            <span class="text-gold-gradient font-normal italic">без чемоданного стресса,</span> ночных автобусов и очередей
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-xs sm:text-xl text-brand-moonLight/85 font-normal max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-10">
+            <strong class="text-white font-semibold">Швейцария 🇨🇭 • Франция 🇫🇷 • Нидерланды 🇳🇱</strong> за 9 дней на скоростных поездах <span class="text-brand-amber font-semibold">TGV</span> и <span class="text-brand-amber font-semibold">Eurostar</span>. Полное сопровождение эксперта с 19-летним стажем и государственным признанием.
+          </p>
+
+          <!-- 3 Orange Benefit Badges (Business-Class Style) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 text-left">
+            
+            <div class="p-3.5 sm:p-5 rounded-2xl bg-gradient-to-br from-[#0A3A40]/80 to-[#062428]/90 border border-brand-amber/40 shadow-lg relative overflow-hidden group hover:border-brand-amber transition-all">
+              <div class="absolute -right-3 -top-3 w-16 h-16 bg-brand-amber/10 rounded-full blur-xl group-hover:bg-brand-amber/20 transition-colors"></div>
+              <div class="flex items-start gap-3 sm:gap-3.5">
+                <span class="text-xl sm:text-2xl p-1.5 sm:p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20 flex-shrink-0">📅</span>
+                <div>
+                  <h2 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-0.5 sm:mb-1">12–20 декабря</h2>
+                  <p class="text-[11px] sm:text-xs text-brand-moonLight/80 leading-normal">
+                    9 дней / 8 ночей идеального европейского сезона рождественских ярмарок и праздничной иллюминации.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-5 rounded-2xl bg-gradient-to-br from-[#0A3A40]/80 to-[#062428]/90 border border-brand-amber/40 shadow-lg relative overflow-hidden group hover:border-brand-amber transition-all">
+              <div class="absolute -right-3 -top-3 w-16 h-16 bg-brand-amber/10 rounded-full blur-xl group-hover:bg-brand-amber/20 transition-colors"></div>
+              <div class="flex items-start gap-3 sm:gap-3.5">
+                <span class="text-xl sm:text-2xl p-1.5 sm:p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20 flex-shrink-0">👥</span>
+                <div>
+                  <h2 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-0.5 sm:mb-1">Камерный формат «все свои»</h2>
+                  <p class="text-[11px] sm:text-xs text-brand-moonLight/80 leading-normal">
+                    Всего 7–8 мест в группе. Никаких гигантских автобусов на 40 человек и бесконечных ожиданий отстающих.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3.5 sm:p-5 rounded-2xl bg-gradient-to-br from-[#0A3A40]/80 to-[#062428]/90 border border-brand-amber/40 shadow-lg relative overflow-hidden group hover:border-brand-amber transition-all">
+              <div class="absolute -right-3 -top-3 w-16 h-16 bg-brand-amber/10 rounded-full blur-xl group-hover:bg-brand-amber/20 transition-colors"></div>
+              <div class="flex items-start gap-3 sm:gap-3.5">
+                <span class="text-xl sm:text-2xl p-1.5 sm:p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20 flex-shrink-0">🚅</span>
+                <div>
+                  <h2 class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-0.5 sm:mb-1">Скорость и комфорт поездов</h2>
+                  <p class="text-[11px] sm:text-xs text-brand-moonLight/80 leading-normal">
+                    Базель ➔ Кольмар (43 мин), Кольмар ➔ Париж (2.5 ч TGV), Париж ➔ Амстердам (3.5 ч Eurostar).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Price Card (First Screen Offer) -->
+          <div class="max-w-xl mx-auto rounded-3xl glass-gold-card p-4 sm:p-8 shadow-2xl relative mt-4">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 bg-gradient-to-r from-red-600 to-brand-amber text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full shadow-md text-center max-w-[92%] truncate">
+              🔥 Спеццена для первых 3 участников — экономия 150 €
+            </div>
+
+            <div class="flex items-center justify-between gap-3 mt-2 mb-5">
+              <div class="text-left">
+                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-brand-moonLight/60 font-semibold mb-0.5">Стоимость на человека</div>
+                <div class="flex items-baseline gap-2 sm:gap-3">
+                  <span class="text-2xl sm:text-4xl font-extrabold text-white">2 200 €</span>
+                  <span class="text-base sm:text-xl text-brand-moonLight/40 line-through font-medium">2 350 €</span>
+                </div>
+              </div>
+
+              <!-- Available slots badge -->
+              <div class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-brand-tealDeep/80 border border-brand-amber/30 text-center flex-shrink-0">
+                <span class="text-[9px] sm:text-[11px] uppercase tracking-wider text-brand-amber font-bold block">Осталось мест</span>
+                <span class="text-base sm:text-lg font-extrabold text-white">3 из 8</span>
+              </div>
+            </div>
+
+            <!-- CTA Button with Pulse Effect & Instant WhatsApp Redirect -->
+            <a 
+              href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-extrabold text-xs sm:text-lg tracking-wide uppercase shadow-xl shadow-brand-amber/30 transition-all duration-300 active:scale-95 min-h-[48px] sm:min-h-[54px] animate-goldGlow text-center"
+            >
+              <span>Занять место по спеццене 2 200 €</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+
+            <div class="mt-3 sm:mt-4 flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-brand-moonLight/70 text-center font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-amber flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Официальный договор туроператора · Фиксация на 48 часов</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 3: СУРОВАЯ ПРАВДА (Cost of Doing It Alone / Effort & Sacrifice)
+         ======================================================================== -->
+    <section id="why-us" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Честное сравнение по методологии Grand Slam</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
+            Суровая правда декабрьской Европы
+          </h2>
+          <p class="text-base text-brand-moonLight/80">
+            Почему самостоятельная поездка в Рождество часто оборачивается переплатой, стрессом и нервотрёпкой — и как решает эту задачу авторский маршрут Нины Шахановой.
+          </p>
+        </div>
+
+        <!-- Head-to-Head Comparison Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+          
+          <!-- Column 1: Самостоятельно -->
+          <div class="rounded-3xl p-6 sm:p-8 bg-red-950/20 border border-red-500/25 relative overflow-hidden">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-red-500/20">
+              <div class="w-10 h-10 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-bold text-xl">
+                ✕
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-red-200">Самостоятельная поездка в декабре</h3>
+                <span class="text-xs text-red-300/70">Высокий стресс, хаос и скрытые траты</span>
+              </div>
+            </div>
+
+            <ul class="space-y-4 text-sm text-brand-moonLight/80">
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">Безумные цены на отели в пик сезона:</strong>
+                  номера в центре Базеля, Парижа и Кольмара в декабре взлетают в 2–3 раза или раскуплены за полгода.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">Стресс на незнакомых вокзалах:</strong>
+                  самостоятельный поиск платформ на французском и немецком языках, риск сесть не в тот вагон или опоздать.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">Риск не успеть с шенгенской визой:</strong>
+                  в посольствах Европы перед Новым годом ажиотаж, слотов нет, любая ошибка в анкете грозит срывом отпуска.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">8–10 часов в душных автобусах:</strong>
+                  дешёвые туры везут людей изнурительными ночными автобусами, после которых болит спина и нет сил радоваться празднику.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">Гигантские очереди на холоде:</strong>
+                  в Версаль и на кораблики без предзаказанных групповых тайм-слотов приходится стоять по 1.5–2 часа на ветру.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Авторский маршрут Турсалон -->
+          <div class="rounded-3xl p-6 sm:p-8 bg-[#0A3A40]/70 border-2 border-brand-amber/50 relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 px-4 py-1 bg-brand-amber text-[#062428] text-[11px] font-extrabold uppercase tracking-wider rounded-bl-xl shadow-md">
+              ВЫБОР ЭКСПЕРТА
+            </div>
+
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+              <div class="w-10 h-10 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center font-bold text-xl">
+                ✓
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Авторский маршрут Нины Шахановой</h3>
+                <span class="text-xs text-brand-amber font-medium">100% комфорт, скорость и забота туроператора</span>
+              </div>
+            </div>
+
+            <ul class="space-y-4 text-sm text-brand-moonLight/90">
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Отели отобраны лично с включёнными завтраками:</strong>
+                  уютные европейские гостиницы в удобных локациях, проверенные лично Ниной.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Готовые скоростные поезда «центр-в-центр»:</strong>
+                  никаких пробок и автобусов — TGV и Eurostar со скоростью до 300 км/ч, просторный салон, Wi-Fi и кофе.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Визовое сопровождение под ключ:</strong>
+                  ТОО «ТурСалон» берёт подготовку документов, брони и подачу на шенген полностью под свой контроль.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Билеты в Версаль и круиз без очередей:</strong>
+                  все входные билеты и круиз со светом Amsterdam Light Festival забронированы заранее с гарантированным входом.
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Нина рядом на каждом шаге 24/7:</strong>
+                  эксперт с высшим образованием и 19 годами опыта решает все логистические вопросы, показывая лучшие секретные локации.
+                </div>
+              </li>
+            </ul>
+
+            <div class="mt-8 pt-4 border-t border-white/10 text-center">
+              <a 
+                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-brand-amber hover:text-white font-bold text-sm transition-colors"
+              >
+                <span>Узнать больше о бронировании в WhatsApp</span>
+                <span class="text-base">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 4: ИНТЕРАКТИВНАЯ КАРТА МАРШРУТА МЕЧТЫ
+         ======================================================================== -->
+    <section id="route" class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[#062428] via-[#0A3A40]/40 to-[#062428]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Маршрут премиум-класса</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
+            Карта рождественского маршрута мечты
+          </h2>
+          <p class="text-base text-brand-moonLight/80">
+            Швейцария ➔ Франция (Эльзас, Париж, Версаль) ➔ Нидерланды. Скоростные железные дороги соединяют центры великих городов Европы.
+          </p>
+        </div>
+
+        <!-- [IMAGE_MAP] Авторская иллюстрированная карта в премиальной рамке -->
+        <div class="max-w-5xl mx-auto mb-16">
+          <div class="relative rounded-3xl p-2 sm:p-4 bg-gradient-to-br from-brand-amber/30 via-white/10 to-brand-gold/30 shadow-2xl border border-brand-amber/40 group">
+            <div class="overflow-hidden rounded-2xl bg-[#062428] relative">
+              <img 
+                src="images/map.png" 
+                alt="Авторская иллюстрированная карта рождественского маршрута: Базель, Кольмар, Париж, Версаль, Амстердам" 
+                data-asset="[IMAGE_MAP]"
+                id="routeMapImage"
+                class="w-full h-auto object-contain block mx-auto transform duration-500 group-hover:scale-[1.01] cursor-pointer"
+                onclick="openLightbox(this.src)"
+              >
+              <!-- Interactive floating hover tag -->
+              <div class="absolute bottom-4 right-4 px-3 py-1.5 rounded-xl bg-[#062428]/90 backdrop-blur-md border border-brand-amber/40 text-brand-amber text-xs font-semibold flex items-center gap-1.5 shadow-lg">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                </svg>
+                <span>Нажмите для увеличения</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 Christmas Postcards / Triggers Bento-Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          
+          <!-- Card 1: Базель -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-brand-amber">Точка старта 🇨🇭</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-white/10 text-brand-moonLight font-medium">12 дек</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white mb-2">1. Базель (Швейцария)</h3>
+              <p class="text-sm text-brand-moonLight/80 leading-relaxed">
+                Вековые соборы с черепичными крышами, праздничный пряный глинтвейн в кружках-сапожках на ярмарках Münsterplatz и Barfüsserplatz, вид на скованный зимой Рейн.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-brand-gold">
+              <span>🎄 Старейшие ярмарки Швейцарии</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Кольмар -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between lg:col-span-2">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-brand-amber">Столица Рождества 🇫🇷</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-white/10 text-brand-moonLight font-medium">13–14 дек (2 ночи)</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white mb-2">2. Кольмар (Эльзас)</h3>
+              <p class="text-sm text-brand-moonLight/80 leading-relaxed mb-3">
+                Сказочные фахверковые домики, украшенные плюшевыми мишками и хвойными гирляндами. Романтичная прогулка на деревянной лодке по каналам квартала «Маленькая Венеция», дегустация эльзасских рислингов и традиционного пирога кугельхопф.
+              </p>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brand-amber/15 text-brand-amber text-xs font-semibold">
+                🚅 Скоростной поезд из Базеля: всего 43 минуты в пути!
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-brand-gold">
+              <span>🍷 Дегустация эльзасских вин и каналы Petite Venise</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Париж -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-brand-amber">Город Света 🇫🇷</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-white/10 text-brand-moonLight font-medium">15–17 дек (3 ночи)</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white mb-2">3. Париж (Франция)</h3>
+              <p class="text-sm text-brand-moonLight/80 leading-relaxed">
+                Знаменитая гигантская ель под витражным стеклянным куполом Galeries Lafayette, миллионы мерцающих огней на Елисейских полях, аромат жареных каштанов в саду Тюильри и панорамный вечерний кораблик по Сене.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-brand-gold">
+              <span>✨ TGV Lyria: 2 ч 37 мин из Кольмара</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Версаль -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-brand-amber">Королевский Триумф 🇫🇷</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-white/10 text-brand-moonLight font-medium">17 дек</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white mb-2">4. Королевский Версаль</h3>
+              <p class="text-sm text-brand-moonLight/80 leading-relaxed">
+                Входной билет во дворец «Короля-Солнца» Людовика XIV, сияющая Зеркальная галерея, величие парадных покоев и старинный рождественский ярмарочный городок Версаля.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-brand-gold">
+              <span>👑 Билеты включены · Экспресс RER C</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Амстердам -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-extrabold uppercase tracking-widest text-brand-amber">Финал Сказки 🇳🇱</span>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-white/10 text-brand-moonLight font-medium">18–20 дек (2 ночи)</span>
+            </div>
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-white mb-2">5. Амстердам (Нидерланды)</h3>
+              <p class="text-sm text-brand-moonLight/80 leading-relaxed">
+                Вечерний круиз на катере сквозь световые инсталляции всемирного фестиваля Amsterdam Light Festival с выдержанными голландскими сырами и вином + финальный праздничный гала-ужин всей группы!
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-brand-gold">
+              <span>🧀 Eurostar: 3.5 ч из Парижа · Круиз включен</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 5: ДЕТАЛЬНЫЙ ТАЙМИНГ ДЕНЬ ЗА ДНЕМ (Zero Guesswork)
+         ======================================================================== -->
+    <section id="program" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Никакой неопределенности</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
+            Программа 9 дней по минутам
+          </h2>
+          <p class="text-base text-brand-moonLight/80">
+            Каждый день спланирован математически точно: без ранних подъемов в 5 утра, с комфортными скоростными поездами и свободным временем для покупок и атмосферных прогулок.
+          </p>
+        </div>
+
+        <!-- Day-by-Day Accordion / Timeline -->
+        <div class="space-y-4" id="itineraryAccordion">
+          
+          <!-- День 1 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">01</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">12 декабря, Суббота · Швейцария</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Прилёт в Базель и первые рождественские огни</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2"><strong>11:45</strong> — Прилёт группы в международный аэропорт Базель-Мюлуз. Встреча с Ниной Шахановой.</p>
+              <p class="mb-2">Комфортный трансфер и заселение в отель Базеля. Небольшой отдых после перелета.</p>
+              <p class="mb-2">Вечерняя прогулка по историческому центру Базеля: праздничные ярмарки на <em>Münsterplatz</em> у собора и <em>Barfüsserplatz</em>, где зажигаются тысячи огней и подают лучший швейцарский глинтвейн.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Базеле.</p>
+            </div>
+          </div>
+
+          <!-- День 2 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">02</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">13 декабря, Воскресенье · Эльзас</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Скоростной поезд в Кольмар (43 мин) и «Маленькая Венеция»</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2"><strong>10:51–11:34</strong> — Посадка на скоростной поезд Базель ➔ Кольмар. Всего 43 минуты в пути без пробок и таможенных очередей!</p>
+              <p class="mb-2">Заселение в отель в Кольмаре. Погружение в настоящую сказку братьев Гримм: квартал «Маленькая Венеция», ярмарки в средневековом Койфхусе и площади Доминиканцев.</p>
+              <p class="mb-2">Дегустация знаменитых эльзасских пряников, сыра Мюнстер и фуа-гра.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Кольмаре.</p>
+            </div>
+          </div>
+
+          <!-- День 3 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">03</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">14 декабря, Понедельник · Эльзас</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Полный день в Кольмаре без чемоданов: лодки и винные дороги</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2">Неспешный европейский завтрак в отеле. День абсолютно свободен от суеты с багажом.</p>
+              <p class="mb-2">Катание на лодке по живописным каналам «Маленькой Венеции». Дегустация лучших сортов эльзасских вин (Riesling, Gewurztraminer).</p>
+              <p class="mb-2">Для желающих — возможность заехать в соседние пряничные деревни Риквир или Эгисхайм (признана самой красивой деревней Франции).</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Кольмаре.</p>
+            </div>
+          </div>
+
+          <!-- День 4 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">04</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">15 декабря, Вторник · Франция</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Суперпоезд TGV в Париж (2.5 ч) и Galeries Lafayette</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2"><strong>10:28–13:05</strong> — Прямой скоростной поезд TGV Кольмар ➔ Париж (всего 2 ч 37 мин). Вы прибываете прямо в центр Парижа!</p>
+              <p class="mb-2">Размещение в парижском отеле. Прогулка по праздничному бульвару Осман.</p>
+              <p class="mb-2">Главный символ парижского Рождества: колоссальная дизайнерская ёлка под историческим витражным куполом <em>Galeries Lafayette</em>, смотровая площадка на крыше с видом на Оперу Гарнье и Эйфелеву башню. Вечерняя рождественская ярмарка в королевском саду Тюильри.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Париже.</p>
+            </div>
+          </div>
+
+          <!-- День 5 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">05</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">16 декабря, Среда · Франция</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Средневековый Париж с гидом и кораблик по Сене</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2">Авторская пешеходная экскурсия «Средневековый Париж и магия острова Сите» с сертифицированным русскоязычным гидом.</p>
+              <p class="mb-2">Богемный Монмартр, базилика Сакре-Кёр, Триумфальная арка и Елисейские поля в рождественской иллюминации.</p>
+              <p class="mb-2">Вечером — романтический круиз на кораблике по Сене: мерцающая огнями Эйфелева башня с борта теплохода.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Париже.</p>
+            </div>
+          </div>
+
+          <!-- День 6 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">06</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">17 декабря, Четверг · Франция</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Королевский Версаль: Зеркальная галерея и ярмарка</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2">Поездка на комфортном скоростном двухэтажном экспрессе RER C в резиденцию французских королей — Версаль.</p>
+              <p class="mb-2">Входные билеты забронированы заранее: Зеркальная галерея (Galerie des Glaces), парадные апартаменты короля и королевы, величие залов.</p>
+              <p class="mb-2">Прогулка по старинному рождественскому городку Версаля, согревающее кофе и возвращение в вечерний Париж.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Париже.</p>
+            </div>
+          </div>
+
+          <!-- День 7 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">07</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">18 декабря, Пятница · Нидерланды</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Eurostar в Амстердам (3.5 ч) и круиз Amsterdam Light Festival</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2"><strong>10:48–14:15</strong> — Скоростной флагманский экспресс Eurostar Париж (Gare du Nord) ➔ Амстердам (Centraal). Время в пути 3 ч 27 мин.</p>
+              <p class="mb-2">Заселение в отель. Знакомство с рождественской деревней <em>Ice*Village</em> на Музейной площади у Рейксмюсеума с катком и пряничными лавками.</p>
+              <p class="mb-2"><strong>Кульминация вечера:</strong> вечерний закрытый круиз по каналам сквозь световые арт-объекты знаменитого фестиваля <em>Amsterdam Light Festival</em> с подачей голландских сыров и вина на борту.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Амстердаме.</p>
+            </div>
+          </div>
+
+          <!-- День 8 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">08</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">19 декабря, Суббота · Нидерланды</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Район Йордан, дегустации сыров и Гала-ужин</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2">Уютные улочки района Йордан: винтажные магазинчики, галереи, ароматы выпечки с корицей.</p>
+              <p class="mb-2">Посещение крафтовой сырной лавки с дегустацией фермерских сортов гауды разной выдержки.</p>
+              <p class="mb-2">Свободное время для выбора рождественских подарков для близких.</p>
+              <p class="mb-2"><strong>Праздничный Рождественский гала-ужин:</strong> теплый вечер в кругу новых друзей, подведение итогов путешествия и тосты за наступающий год.</p>
+              <p class="text-brand-gold text-xs font-semibold">Ночь в Амстердаме.</p>
+            </div>
+          </div>
+
+          <!-- День 9 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden transition-all duration-300">
+            <button class="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none" onclick="toggleDay(this)">
+              <div class="flex items-center gap-3 sm:gap-5 min-w-0">
+                <div class="flex-shrink-0 flex flex-col items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-b from-brand-amber/25 to-brand-amber/5 border border-brand-amber/40 shadow-sm text-center">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none">ДЕНЬ</span>
+                  <span class="text-xl sm:text-2xl font-extrabold text-white leading-tight mt-0.5">09</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs text-brand-amber font-semibold uppercase tracking-wider">20 декабря, Воскресенье · Финал тура</div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">Схипхол, оформление Tax Free и вылет домой</h3>
+                </div>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex-shrink-0 flex items-center justify-center text-white chevron-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="day-details px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              <p class="mb-2">Прямой утренний поезд из центра Амстердама в аэропорт Схипхол к <strong>08:50</strong> (всего 15 минут в пути).</p>
+              <p class="mb-2">Спокойное оформление возврата Tax Free на купленные подарки с помощью Нины.</p>
+              <p class="mb-2">Вылет группы в <strong>12:00</strong> с чемоданами, полными европейских деликатесов, и сердцем, полным рождественского тепла.</p>
+              <p class="text-brand-waGreen text-xs font-semibold">Счастливое возвращение домой!</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 6: ФАКТОР ДОВЕРИЯ №1 — НИНА ШАХАНОВА (High Likelihood of Achievement)
+         ======================================================================== -->
+    <section id="expert" class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[#062428] via-[#0A3A40]/30 to-[#062428]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center max-w-6xl mx-auto">
+          
+          <!-- Left: [IMAGE_NINA] Нина Шаханова -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-sm sm:max-w-md rounded-3xl p-3 bg-gradient-to-b from-brand-amber/40 via-white/10 to-brand-gold/40 border border-brand-amber/40 shadow-2xl">
+              <div class="overflow-hidden rounded-2xl relative aspect-[3/4] bg-[#0A3A40]">
+                <img 
+                  src="images/nina.png" 
+                  alt="Нина Шаханова — основатель авторского рождественского тура «Турсалон»" 
+                  data-asset="[IMAGE_NINA]"
+                  class="w-full h-full object-cover object-top filter brightness-[1.02]"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-[#062428]/80 via-transparent to-transparent"></div>
+              </div>
+              
+              <!-- Floating Badge -->
+              <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] py-2.5 px-4 rounded-xl bg-brand-tealDeep/95 backdrop-blur-md border border-brand-amber text-center shadow-xl">
+                <span class="text-xs sm:text-sm font-bold text-white flex items-center justify-center gap-1.5 whitespace-nowrap">
+                  <span>✈️</span> Лично летит и координирует тур
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Proof & Credentials -->
+          <div class="lg:col-span-7 pt-6 lg:pt-0">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Главная гарантия надёжности</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-6 leading-tight">
+              Вашим путешествием управляют 19 лет опыта и физмат-аналитика
+            </h2>
+
+            <div class="space-y-4 mb-8">
+              
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-brand-amber/30 transition-colors">
+                <span class="text-2xl p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20">🎖️</span>
+                <div>
+                  <h3 class="text-base font-bold text-white">Почётный работник туризма РК</h3>
+                  <p class="text-xs sm:text-sm text-brand-moonLight/80">
+                    Официальный государственный нагрудный знак Республики Казахстан за вклад в развитие индустрии туризма.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-brand-amber/30 transition-colors">
+                <span class="text-2xl p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20">🎓</span>
+                <div>
+                  <h3 class="text-base font-bold text-white">Диплом МГУС (Москва) + Высшее физмат образование</h3>
+                  <p class="text-xs sm:text-sm text-brand-moonLight/80">
+                    Профессиональный диплом индустрии сервиса и туризма в сочетании с физико-математической точностью расчетов каждого стыковочного маршрута.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-brand-amber/30 transition-colors">
+                <span class="text-2xl p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20">🛡️</span>
+                <div>
+                  <h3 class="text-base font-bold text-white">Гослицензия туроператора ТО-1039</h3>
+                  <p class="text-xs sm:text-sm text-brand-moonLight/80">
+                    Официальная государственная лицензия № 12000698 от 02.03.2012 года. Полная юридическая защита ваших средств и договор.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-brand-amber/30 transition-colors">
+                <span class="text-2xl p-2 rounded-xl bg-brand-amber/15 text-brand-amber border border-brand-amber/20">🤝</span>
+                <div>
+                  <h3 class="text-base font-bold text-white">Личное присутствие 24/7</h3>
+                  <p class="text-xs sm:text-sm text-brand-moonLight/80">
+                    Нина берет на себя все организационные задачи: от языкового перевода и посадки в поезд до лучших столиков с горячим глинтвейном.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Quote Block -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-amber/15 to-transparent border-l-4 border-brand-amber italic text-brand-moonLight text-sm sm:text-base leading-relaxed">
+              «Я собрала этот маршрут так, как делаю это для своей семьи: без изнурительных автобусов, без спешки, с красивыми скоростными поездами и лучшими рождественскими ярмарками».
+              <div class="not-italic text-xs font-bold text-white mt-2 uppercase tracking-wider">— Нина Шаханова</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 7: GRAND SLAM OFFER STACK & ФИНАНСОВАЯ ПРОЗРАЧНОСТЬ
+         ======================================================================== -->
+    <section id="pricing" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Grand Slam Offer Stack</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
+            Полная прозрачность и ценность тура
+          </h2>
+          <p class="text-base text-brand-moonLight/80">
+            Никаких скрытых доплат и неприятных сюрпризов на месте. Вы точно знаете, во сколько обойдётся путешествие вашей мечты.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto items-stretch">
+          
+          <!-- Left: Everything Included Stack (8 cols) -->
+          <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#0A3A40]/80 to-[#062428] border-2 border-brand-amber/50 shadow-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/15">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-bold text-white">Всё включено в стоимость тура</h3>
+                  <p class="text-xs text-brand-amber font-semibold mt-0.5">Тариф: 2 200 € (спеццена) / 2 350 € (стандарт)</p>
+                </div>
+                <span class="text-2xl">✨</span>
+              </div>
+
+              <ul class="space-y-3.5 text-sm text-brand-moonLight/90">
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Проживание 9 дней / 8 ночей</strong> в комфортабельных отелях Европы с вкусными завтраками;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Все билеты на скоростные поезда TGV, Eurostar и RER</strong> между всеми городами маршрута;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Входной билет в королевский дворец Версаль</strong> (парадные покои, Зеркальная галерея);</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Обзорная авторская экскурсия по Парижу</strong> с профессиональным аккредитованным гидом;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Вечерний круиз по каналам Амстердама</strong> в сиянии фестиваля света Amsterdam Light Festival;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Дегустация вин и фермерских сыров</strong> на борту круиза в Амстердаме;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Праздничный Рождественский гала-ужин</strong> для всей группы в знаковом ресторане Амстердама;</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-5 h-5 rounded-full bg-brand-waGreen/20 text-brand-waGreen flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
+                  <span><strong>Личное экспертное сопровождение Нины Шахановой 24/7</strong> от встречи до вылета.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span class="text-xs text-brand-moonLight/60 block">Специальная цена для первых 3 участников:</span>
+                <span class="text-2xl font-extrabold text-white">2 200 €</span>
+                <span class="text-sm line-through text-brand-moonLight/40 ml-2">2 350 €</span>
+              </div>
+              <a 
+                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white font-bold text-sm shadow-lg shadow-brand-waGreen/25 transition-all"
+              >
+                Забронировать место в WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Transparent Additional Expenses (5 cols) -->
+          <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 glass-card border border-white/10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Прозрачные сопутствующие расходы</h3>
+                  <p class="text-xs text-brand-moonLight/60 mt-0.5">Оплачиваются отдельно или по факту</p>
+                </div>
+                <span class="text-2xl">📋</span>
+              </div>
+
+              <div class="space-y-4 text-sm text-brand-moonLight/80">
+                <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span>Международный авиаперелёт</span>
+                    <span class="text-brand-amber">~800 €</span>
+                  </div>
+                  <p class="text-xs text-brand-moonLight/70">
+                    Подбираем самые удобные стыковки и минимальное время в пути под расписание тура.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span>Оформление шенгенской визы</span>
+                    <span class="text-brand-amber">170 €</span>
+                  </div>
+                  <p class="text-xs text-brand-moonLight/70">
+                    Полное визовое сопровождение под ключ: запись, проверка и сбор пакета документов туроператором.
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span>Обеды и ужины</span>
+                    <span class="text-brand-amber">~500 €</span>
+                  </div>
+                  <p class="text-xs text-brand-moonLight/70">
+                    На все 9 дней поездки (завтраки уже включены в каждом отеле).
+                  </p>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="flex items-center justify-between font-bold text-white mb-1">
+                    <span>Личные сувениры и шопинг</span>
+                    <span class="text-brand-amber">индивидуально</span>
+                  </div>
+                  <p class="text-xs text-brand-moonLight/70">
+                    Швейцарский шоколад, эльзасские вина, французские духи и нидерландские сыры.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-white/10 text-xs text-brand-moonLight/60">
+              💡 Все финансовые расчеты оформляются официальным договором ТОО «ТурСалон».
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 8: УСТРАНЕНИЕ ВОЗРАЖЕНИЙ (FAQ)
+         ======================================================================== -->
+    <section id="faq" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Ответы на главные вопросы</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">
+            Часто задаваемые вопросы
+          </h2>
+          <p class="text-base text-brand-moonLight/80">
+            Всё, что вам важно знать перед тем, как принять решение и забронировать место.
+          </p>
+        </div>
+
+        <div class="space-y-4" id="faqAccordion">
+          
+          <!-- FAQ 1 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden">
+            <button class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+              <span class="text-base sm:text-lg font-bold text-white">
+                А если я не успею оформить шенгенскую визу?
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white faq-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              Мы берем запись, сбор и подачу документов на себя через проверенные каналы туроператора. Но именно поэтому бронировать тур необходимо прямо сейчас: в предновогодний сезон европейские консульства загружены, и каждый день на счету для своевременной выдачи штампа в паспорт.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden">
+            <button class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+              <span class="text-base sm:text-lg font-bold text-white">
+                Почему путешествие на скоростных поездах, а не на автобусе? Ведь автобус дешевле?
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white faq-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              Автобусные туры отнимают по 8–10 часов каждого дня в душном салоне, выматывают поясницу и ноги, заставляют вставать на рассвете и стоять в пробках на трассах. Мы ценим ваш отдых: скоростные поезда TGV и Eurostar домчат вас за 43 минуты или 2.5 часа с чашкой горячего кофе, розетками и панорамными видами прямо из центра одного города в самый центр следующего!
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden">
+            <button class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+              <span class="text-base sm:text-lg font-bold text-white">
+                Можно ли поехать одному или одной? Не будет ли мне скучно?
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white faq-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              Конечно! Формат камерной мини-группы «все свои» (всего 7–8 человек) идеально подходит для индивидуальных путешественников. Все участники быстро становятся дружной компанией единомышленников, при этом у каждого всегда есть личное пространство и время для уединения. Никто не чувствует себя чужим.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="rounded-2xl glass-card border border-white/10 overflow-hidden">
+            <button class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none" onclick="toggleFaq(this)">
+              <span class="text-base sm:text-lg font-bold text-white">
+                Как фиксируется цена и бронируется место?
+              </span>
+              <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-white faq-icon transition-transform duration-300">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </button>
+            <div class="faq-answer px-5 sm:px-6 pb-6 text-sm text-brand-moonLight/80 border-t border-white/10 pt-4">
+              Мы заключаем официальный юридический договор туроператора ТО-1039 (ТОО «ТурСалон»). После вашего обращения в WhatsApp стоимость и ваше место замораживаются на 48 часов до внесения предоплаты, защищая вас от любых скачков валют или подорожания билетов.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 9: FINAL URGENCY CTA & ПОДВАЛ
+         ======================================================================== -->
+    <section class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-[#062428] via-[#0A3A40]/70 to-[#062428] border-t border-white/10">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <!-- Scarcity / Urgency Floating Banner -->
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-600/20 border border-red-500/40 text-red-200 text-xs sm:text-sm font-bold uppercase tracking-wider mb-8 shadow-xl animate-pulse-slow">
+          <span>🔥</span>
+          <span>Осталось всего 3 места по специальной цене 2 200 € (вместо 2 350 €)</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+          Подарите себе настоящее европейское Рождество в 2026 году
+        </h2>
+
+        <p class="text-base sm:text-xl text-brand-moonLight/85 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Напишите Нине Шахановой напрямую в WhatsApp — получите подробную презентацию, консультацию по визе и зафиксируйте спецтариф на 48 часов.
+        </p>
+
+        <!-- Huge WhatsApp CTA Button -->
+        <div class="max-w-xl mx-auto">
+          <a 
+            href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-brand-waGreen hover:bg-brand-waHover text-white text-base sm:text-xl font-extrabold tracking-wide shadow-2xl shadow-brand-waGreen/35 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] min-h-[60px]"
+          >
+            <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+            </svg>
+            <span>Забронировать место в WhatsApp с Ниной (+7 777 279 69 62) →</span>
+          </a>
+          <span class="text-xs text-brand-moonLight/60 mt-3 block">
+            Прямой диалог с организатором · Без посредников · Ответ в течение 10 минут
+          </span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER: Каноническая информация и реквизиты компании
+       ======================================================================== -->
+  <footer class="border-t border-white/10 bg-[#041a1d] text-brand-moonLight/70 py-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-white/10 items-start">
+        
+        <!-- Col 1: Brand & Logo -->
+        <div>
+          <div class="flex items-center space-x-3 mb-3">
+            <div class="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-brand-amber to-brand-gold/60 shadow-md">
+              <img 
+                src="images/logo.png" 
+                alt="Логотип «Турсалон»" 
+                class="w-full h-full object-contain rounded-full bg-[#062428]"
+              >
+            </div>
+            <span class="font-sans font-black text-xl tracking-tight uppercase">
+              <span class="text-[#E11D48]">ТУР</span><span class="text-[#0084FF]">САЛОН</span>
+            </span>
+          </div>
+          <p class="text-xs text-brand-moonLight/70 leading-relaxed mb-3">
+            Лицензированный туроператор Республики Казахстан. Создаем авторские путешествия премиум-класса с 2007 года.
+          </p>
+          <div class="text-xs text-brand-gold font-semibold">
+            📜 ТОО «ТурСалон» · Гослицензия туроператора ТО-1039 (№ 12000698 от 02.03.2012)
+          </div>
+        </div>
+
+        <!-- Col 2: Physical Address & Hours -->
+        <div>
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Офис в Астане</h3>
+          <p class="text-xs text-brand-moonLight/80 leading-relaxed mb-2 flex items-start gap-2">
+            <span class="text-brand-amber mt-0.5">📍</span>
+            <span>Казахстан, г. Астана, пр. Сарыарка 17, офис 20 (ЖК «Авангард» / БЦ «Бурлин»)</span>
+          </p>
+          <p class="text-xs text-brand-moonLight/80 leading-relaxed flex items-start gap-2">
+            <span class="text-brand-amber mt-0.5">🕒</span>
+            <span>Пн–Пт 10:00–19:00, Сб 10:00–15:00 <br><span class="text-brand-moonLight/50">(приём в офисе по предварительной записи)</span></span>
+          </p>
+        </div>
+
+        <!-- Col 3: Direct WhatsApp -->
+        <div>
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Связь с экспертом</h3>
+          <p class="text-xs text-brand-moonLight/80 leading-relaxed mb-3">
+            Единственный официальный публичный номер для бронирования и консультаций:
+          </p>
+          <a 
+            href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-white font-bold hover:text-brand-waGreen transition-colors text-base"
+          >
+            <span class="w-3 h-3 rounded-full bg-brand-waGreen inline-block"></span>
+            +7 777 279 69 62 (WhatsApp)
+          </a>
+          <p class="text-[11px] text-brand-moonLight/50 mt-2">
+            Нина Шаханова лично отвечает на сообщения и сопровождает оформление тура.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-moonLight/50 gap-4">
+        <div>
+          © 2007–2026 ТОО «ТурСалон». Все права защищены.
+        </div>
+        <div class="flex space-x-6">
+          <span>Договор оферты туроператора</span>
+          <span>Политика конфиденциальности</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       ПЛАВАЮЩАЯ КНОПКА WHATSAPP (Desktop Floating CTA)
+       ======================================================================== -->
+  <aside aria-label="Быстрая связь" class="hidden md:flex fixed bottom-6 right-6 z-50">
+    <a 
+      href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="group relative flex items-center justify-center w-16 h-16 rounded-full bg-brand-waGreen text-white shadow-2xl shadow-brand-waGreen/40 hover:bg-brand-waHover transition-transform duration-300 hover:scale-110 active:scale-95"
+      title="Написать в WhatsApp Нине Шахановой"
+    >
+      <!-- Pulsing Ping Waves -->
+      <span class="absolute -inset-1 rounded-full bg-brand-waGreen opacity-60 animate-ping pointer-events-none"></span>
+
+      <!-- Notification Counter Dot -->
+      <span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-[10px] font-extrabold text-white border-2 border-[#062428]">
+        1
+      </span>
+
+      <!-- WhatsApp SVG Icon -->
+      <svg class="w-8 h-8 fill-current relative z-10" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- ========================================================================
+       STICKY BOTTOM CONVERSION BAR FOR MOBILE (Mobile-First Thumb-Zone UX)
+       ======================================================================== -->
+  <aside aria-label="Быстрое бронирование тура" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#062428]/95 backdrop-blur-md border-t border-brand-amber/35 px-4 py-3 shadow-[0_-8px_25px_rgba(0,0,0,0.5)]">
+    <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-amber inline-block"></span>
+          <span>Осталось 3 места</span>
+        </div>
+        <div class="flex items-baseline gap-1.5 mt-1">
+          <span class="text-xl font-extrabold text-white leading-none">2 200 €</span>
+          <span class="text-xs text-brand-moonLight/40 line-through">2 350 €</span>
+        </div>
+      </div>
+      <a 
+        href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white text-xs font-extrabold tracking-wide uppercase shadow-lg shadow-brand-waGreen/30 active:scale-95 transition-all min-h-[44px]"
+      >
+        <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+        </svg>
+        <span>Занять место</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL FOR MAP (Interactive Zoom)
+       ======================================================================== -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <button class="absolute top-6 right-6 text-white text-3xl font-light hover:text-brand-amber transition-colors focus:outline-none">&times;</button>
+    <img id="lightboxImg" src="" alt="Маршрут тура в полном размере" class="max-w-full max-h-[90vh] rounded-2xl shadow-2xl object-contain border border-white/20">
+  </div>
+
+  <!-- ========================================================================
+       VANILLA JAVASCRIPT: Accordions, Lightbox, Snow Effect
+       ======================================================================== -->
+  <script>
+    // 1. Day-by-Day Accordion Toggle
+    function toggleDay(button) {
+      const details = button.nextElementSibling;
+      const icon = button.querySelector('.chevron-icon');
+      const isOpen = details.classList.contains('open');
+
+      // Close all other days for clean readability
+      document.querySelectorAll('.day-details').forEach(el => {
+        el.classList.remove('open');
+      });
+      document.querySelectorAll('.chevron-icon').forEach(el => {
+        el.style.transform = 'rotate(0deg)';
+      });
+
+      if (!isOpen) {
+        details.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Auto-open Day 1 by default
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstDayBtn = document.querySelector('#itineraryAccordion button');
+      if (firstDayBtn) toggleDay(firstDayBtn);
+    });
+
+    // 2. FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+
+      if (isOpen) {
+        answer.classList.remove('open');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        answer.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // 3. Map Lightbox
+    function openLightbox(src) {
+      const modal = document.getElementById('imageLightbox');
+      const img = document.getElementById('lightboxImg');
+      img.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('imageLightbox');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // 4. Subtle Ambient Snow Generation
+    (function createSnowflakes() {
+      const container = document.getElementById('snowContainer');
+      const flakeCount = 28;
+      const symbols = ['❅', '❆', '•'];
+
+      for (let i = 0; i < flakeCount; i++) {
+        const span = document.createElement('span');
+        span.className = 'snowflake';
+        span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        span.style.left = Math.random() * 100 + '%';
+        span.style.animationDuration = (Math.random() * 7 + 8) + 's';
+        span.style.animationDelay = (Math.random() * 5) + 's';
+        span.style.fontSize = (Math.random() * 10 + 10) + 'px';
+        span.style.opacity = Math.random() * 0.4 + 0.1;
+        container.appendChild(span);
+      }
+    })();
+  </script>
+</body>
+</html>
