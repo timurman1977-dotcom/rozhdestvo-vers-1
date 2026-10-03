@@ -128,6 +128,154 @@
       border-radius: 24px;
     }
 
+    /* ========================================================
+       ThreeUI Liquid Glass & Conic Border Shader Buttons
+       ======================================================== */
+    .threeui-btn {
+      --x: 50%;
+      --y: 50%;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-radius: 9999px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Бегущий шейдерный конический контур */
+    .threeui-btn::before {
+      content: '';
+      position: absolute;
+      top: -200%;
+      left: -50%;
+      width: 200%;
+      height: 500%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgba(255, 255, 255, 0.95) 60deg,
+        transparent 120deg,
+        transparent 180deg,
+        rgba(255, 255, 255, 0.95) 240deg,
+        transparent 300deg
+      );
+      animation: threeui-spin 4s linear infinite;
+      z-index: 1;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    @keyframes threeui-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Тело кнопки со стеклянным размытием и внутренним бликом */
+    .threeui-btn-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 14px 26px;
+      border-radius: inherit;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* Интерактивное свечение, следующее за курсором */
+    .threeui-btn-content::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle 90px at var(--x) var(--y),
+        rgba(255, 255, 255, 0.32),
+        transparent 70%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .threeui-btn:hover .threeui-btn-content::before {
+      opacity: 1;
+    }
+
+    /* Золотой рождественский вариант (CTA «Забронировать тур») */
+    .threeui-btn-gold {
+      background: #0f1c16;
+      box-shadow: 0 10px 25px -5px rgba(229, 169, 60, 0.35);
+    }
+
+    .threeui-btn-gold .threeui-btn-content {
+      background: linear-gradient(135deg, rgba(245, 185, 75, 0.95) 0%, rgba(205, 140, 30, 0.95) 100%);
+      color: #141f18;
+    }
+
+    .threeui-btn-gold:hover {
+      box-shadow: 0 16px 36px -4px rgba(229, 169, 60, 0.55);
+    }
+
+    /* Изумрудный вариант (WhatsApp / Консультация) */
+    .threeui-btn-emerald {
+      background: #071510;
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.3);
+    }
+
+    .threeui-btn-emerald .threeui-btn-content {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.92) 0%, rgba(5, 120, 85, 0.95) 100%);
+      color: #ffffff;
+    }
+
+    .threeui-btn-emerald:hover {
+      box-shadow: 0 16px 36px -4px rgba(16, 185, 129, 0.55);
+    }
+
+    .threeui-btn:active {
+      transform: scale(0.97) !important;
+    }
+
+    .threeui-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .threeui-btn {
+        width: 100%;
+        max-width: 100%;
+      }
+      .threeui-btn-content {
+        padding: 13px 18px;
+        font-size: 13px;
+        gap: 8px;
+      }
+    }
+
     /* Text Gradients */
     .text-gold-gradient {
       background: linear-gradient(135deg, #FFFFFF 0%, #F5E6A3 45%, #FF9E1B 100%);
@@ -361,31 +509,28 @@
 
           </div>
 
-          <!-- Hero Frictionless CTA (No upfront price barrier, smooth engagement) -->
-          <div class="max-w-2xl mx-auto rounded-3xl glass-panel p-4 sm:p-7 shadow-2xl relative mt-4 border border-white/20">
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-              <!-- Primary CTA: Scroll to Program -->
-              <a 
-                href="#program"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-black text-sm sm:text-base tracking-wide uppercase shadow-xl shadow-brand-amber/30 transition-all duration-300 hover:scale-[1.02] active:scale-95 animate-goldGlow text-center min-h-[50px] whitespace-nowrap"
-              >
-                <span class="whitespace-nowrap">Смотреть программу</span>
-                <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
+          <!-- Hero Frictionless CTA (ThreeUI Liquid Glass & Conic Border Shader Buttons) -->
+          <div class="max-w-3xl mx-auto rounded-3xl glass-panel p-4 sm:p-7 shadow-2xl relative mt-4 border border-white/20">
+            <div class="threeui-btn-group">
+              <!-- Главная золотая кнопка -->
+              <a href="#booking" class="threeui-btn threeui-btn-gold">
+                <span class="threeui-btn-content">
+                  <span>Забронировать тур</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </span>
               </a>
 
-              <!-- Secondary / Soft CTA: WhatsApp Direct Question -->
-              <a 
-                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%82%D1%83%D1%80%D1%83%20%D0%B2%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%83"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/15 border border-white/25 text-white font-bold text-sm sm:text-base tracking-wide transition-all duration-200 active:scale-95 min-h-[50px] whitespace-nowrap"
-              >
-                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-brand-waGreen fill-current flex-shrink-0" viewBox="0 0 24 24">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
-                </svg>
-                <span class="whitespace-nowrap">Вопрос в WhatsApp</span>
+              <!-- Изумрудная кнопка WhatsApp -->
+              <a href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%82%D1%83%D1%80%D1%83" target="_blank" rel="noopener noreferrer" class="threeui-btn threeui-btn-emerald">
+                <span class="threeui-btn-content">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.772.82 2.791.82 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm0 10.375c-.917 0-1.68-.26-2.427-.723l-.173-.103-1.802.473.481-1.758-.113-.18c-.496-.79-.757-1.571-.756-2.316.001-2.484 2.023-4.504 4.509-4.504 2.484 0 4.506 2.021 4.507 4.505-.001 2.483-2.023 4.503-4.509 4.503z"/>
+                  </svg>
+                  <span>Программа тура в WhatsApp</span>
+                </span>
               </a>
             </div>
 
@@ -1128,7 +1273,8 @@
     <!-- ========================================================================
          СЕКЦИЯ 7: GRAND SLAM OFFER STACK & ФИНАНСОВАЯ ПРОЗРАЧНОСТЬ
          ======================================================================== -->
-    <section id="pricing" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428]">
+    <section id="pricing" class="py-16 md:py-24 relative border-t border-white/10 bg-[#062428] scroll-mt-20">
+      <div id="booking" class="scroll-mt-24"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-14">
@@ -1635,6 +1781,32 @@
         span.style.opacity = Math.random() * 0.4 + 0.1;
         container.appendChild(span);
       }
+    })();
+
+    // 5. ThreeUI 3D Tilt & Cursor Radial Glow
+    (function initThreeUIButtons() {
+      const buttons = document.querySelectorAll('.threeui-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          btn.style.setProperty('--x', `${x}px`);
+          btn.style.setProperty('--y', `${y}px`);
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = ((y - centerY) / centerY) * -10;
+          const rotateY = ((x - centerX) / centerX) * 10;
+
+          btn.style.transform = `perspective(600px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
     })();
   </script>
 </body>
