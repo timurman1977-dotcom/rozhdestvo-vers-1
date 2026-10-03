@@ -278,6 +278,195 @@
       }
     }
 
+    /* ========================================================
+       ThreeUI 3D Interactive Parallax Map with Pulsing Beacons
+    ======================================================== */
+    .threeui-map-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+      perspective: 1200px;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .threeui-map-card {
+      position: relative;
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #061812;
+      border: 1px solid rgba(229, 169, 60, 0.45);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px rgba(229, 169, 60, 0.2);
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+      will-change: transform;
+      cursor: grab;
+    }
+
+    .threeui-map-card:active {
+      cursor: grabbing;
+    }
+
+    /* Контейнер изображения карты */
+    .threeui-map-media {
+      position: relative;
+      width: 100%;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .threeui-map-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transform: translateZ(0px);
+    }
+
+    /* Стеклянный голографический блик (шейдерный слой поверх карты) */
+    .threeui-map-glare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: inherit;
+      background: radial-gradient(
+        circle 450px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.22),
+        rgba(229, 169, 60, 0.1) 40%,
+        transparent 75%
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      mix-blend-mode: overlay;
+      z-index: 5;
+    }
+
+    .threeui-map-card:hover .threeui-map-glare {
+      opacity: 1;
+    }
+
+    /* Золотая виньетка по контуру */
+    .threeui-map-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 45px rgba(6, 24, 18, 0.75);
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    /* Слой интерактивных маячков городов (приподнят в 3D) */
+    .threeui-map-markers {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      transform: translateZ(45px); /* Создает эффект парения над плоскостью карты */
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    /* Индивидуальная точка города */
+    .threeui-beacon {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .threeui-beacon-core {
+      position: relative;
+      width: 14px;
+      height: 14px;
+      background: #f5c451;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #f5c451, 0 0 22px #e5a93c;
+      z-index: 2;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    /* Пульсирующие кольца вокруг маячка */
+    .threeui-beacon-wave {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid rgba(245, 196, 81, 0.85);
+      box-shadow: 0 0 12px rgba(229, 169, 60, 0.65);
+      transform: translate(-50%, -50%);
+      animation: beacon-pulse 2.2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+      pointer-events: none;
+    }
+
+    .threeui-beacon-wave.delay-1 {
+      animation-delay: 0.75s;
+    }
+
+    @keyframes beacon-pulse {
+      0% {
+        width: 14px;
+        height: 14px;
+        opacity: 1;
+      }
+      100% {
+        width: 48px;
+        height: 48px;
+        opacity: 0;
+      }
+    }
+
+    /* Всплывающая подсказка города */
+    .threeui-beacon-tooltip {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: rgba(6, 24, 18, 0.94);
+      border: 1px solid rgba(245, 196, 81, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.55), 0 0 12px rgba(229, 169, 60, 0.35);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .threeui-beacon-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: rgba(245, 196, 81, 0.65) transparent transparent transparent;
+    }
+
+    .threeui-beacon:hover .threeui-beacon-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .threeui-beacon:hover .threeui-beacon-core {
+      transform: scale(1.35);
+      background: #ffffff;
+      box-shadow: 0 0 16px #ffffff, 0 0 25px #f5c451;
+    }
+
     /* Text Gradients */
     .text-gold-gradient {
       background: linear-gradient(135deg, #FFFFFF 0%, #F5E6A3 45%, #FF9E1B 100%);
@@ -782,26 +971,79 @@
           </p>
         </div>
 
-        <!-- [IMAGE_MAP] Авторская иллюстрированная карта в премиальной рамке -->
-        <div class="max-w-5xl mx-auto mb-16">
-          <div class="relative rounded-3xl p-2 sm:p-4 bg-gradient-to-br from-brand-amber/30 via-white/10 to-brand-gold/30 shadow-2xl border border-brand-amber/40 group">
-            <div class="overflow-hidden rounded-2xl bg-[#062428] relative">
+        <!-- ThreeUI 3D Interactive Parallax Map with Pulsing Beacons -->
+        <div class="threeui-map-wrapper mb-16">
+          <div class="threeui-map-card" id="interactiveRouteMap">
+            
+            <!-- Изображение карты -->
+            <div class="threeui-map-media">
               <img 
                 src="images/map.png" 
                 alt="Авторская иллюстрированная карта рождественского маршрута: Базель, Кольмар, Париж, Версаль, Амстердам" 
                 data-asset="[IMAGE_MAP]"
-                id="routeMapImage"
-                class="w-full h-auto object-contain block mx-auto transform duration-500 group-hover:scale-[1.01] cursor-pointer"
+                id="routeMapImg"
+                class="w-full h-auto object-contain block mx-auto cursor-pointer"
                 onclick="openLightbox(this.src)"
               >
-              <!-- Interactive floating hover tag -->
-              <div class="absolute bottom-4 right-4 px-3 py-1.5 rounded-xl bg-[#062428]/90 backdrop-blur-md border border-brand-amber/40 text-brand-amber text-xs font-semibold flex items-center gap-1.5 shadow-lg">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                </svg>
-                <span>Нажмите для увеличения</span>
-              </div>
             </div>
+
+            <!-- Градиентная подложка и световой блик -->
+            <div class="threeui-map-overlay"></div>
+            <div class="threeui-map-glare"></div>
+
+            <!-- Интерактивные 3D-маячки городов маршрута -->
+            <div class="threeui-map-markers">
+              
+              <!-- 1. Базель (Старт) -->
+              <div class="threeui-beacon" style="top: 76.5%; left: 11.5%;" onclick="openLightbox('images/map.png')">
+                <div class="threeui-beacon-wave"></div>
+                <div class="threeui-beacon-wave delay-1"></div>
+                <div class="threeui-beacon-core"></div>
+                <div class="threeui-beacon-tooltip">🇨🇭 Базель · Точка старта (12 дек)</div>
+              </div>
+
+              <!-- 2. Кольмар / Эльзас -->
+              <div class="threeui-beacon" style="top: 49.5%; left: 30.8%;" onclick="openLightbox('images/map.png')">
+                <div class="threeui-beacon-wave"></div>
+                <div class="threeui-beacon-wave delay-1"></div>
+                <div class="threeui-beacon-core"></div>
+                <div class="threeui-beacon-tooltip">🇫🇷 Сказочный Кольмар & Эльзас</div>
+              </div>
+
+              <!-- 3. Париж / Версаль -->
+              <div class="threeui-beacon" style="top: 73%; left: 60.5%;" onclick="openLightbox('images/map.png')">
+                <div class="threeui-beacon-wave"></div>
+                <div class="threeui-beacon-wave delay-1"></div>
+                <div class="threeui-beacon-core"></div>
+                <div class="threeui-beacon-tooltip">🇫🇷 Париж & Королевский Версаль</div>
+              </div>
+
+              <!-- 4. Амстердам -->
+              <div class="threeui-beacon" style="top: 31.5%; left: 72.8%;" onclick="openLightbox('images/map.png')">
+                <div class="threeui-beacon-wave"></div>
+                <div class="threeui-beacon-wave delay-1"></div>
+                <div class="threeui-beacon-core"></div>
+                <div class="threeui-beacon-tooltip">🇳🇱 Амстердам · Круиз & Гала-ужин</div>
+              </div>
+
+              <!-- 5. Схипхол (Вылет) -->
+              <div class="threeui-beacon" style="top: 49%; left: 90.5%;" onclick="openLightbox('images/map.png')">
+                <div class="threeui-beacon-wave"></div>
+                <div class="threeui-beacon-wave delay-1"></div>
+                <div class="threeui-beacon-core"></div>
+                <div class="threeui-beacon-tooltip">✈️ Аэропорт Схипхол · Вылет (20 дек)</div>
+              </div>
+
+            </div>
+
+            <!-- Интерактивная плашка увеличения -->
+            <div class="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 z-10 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-[#062428]/90 backdrop-blur-md border border-brand-amber/40 text-brand-amber text-[10px] sm:text-xs font-semibold flex items-center gap-1 sm:gap-1.5 shadow-xl pointer-events-none">
+              <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+              </svg>
+              <span>3D Parallax · Зум</span>
+            </div>
+
           </div>
         </div>
 
@@ -1825,6 +2067,64 @@
           btn.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
         });
       });
+    })();
+
+    // 6. ThreeUI 3D Parallax Map Tilt & Shader Glare
+    (function initParallaxMap() {
+      const card = document.getElementById('interactiveRouteMap');
+      if (!card) return;
+
+      let bounds;
+      let isHovered = false;
+
+      function refreshBounds() {
+        bounds = card.getBoundingClientRect();
+      }
+
+      card.addEventListener('mouseenter', () => {
+        isHovered = true;
+        refreshBounds();
+      });
+
+      window.addEventListener('resize', refreshBounds);
+      window.addEventListener('scroll', refreshBounds, { passive: true });
+
+      card.addEventListener('mousemove', (e) => {
+        if (!bounds) refreshBounds();
+
+        const mouseX = e.clientX - bounds.left;
+        const mouseY = e.clientY - bounds.top;
+
+        // Coordinates for radial holographic shader glare
+        card.style.setProperty('--mouse-x', `${mouseX}px`);
+        card.style.setProperty('--mouse-y', `${mouseY}px`);
+
+        // 3D Tilt calculation (max ±12 degrees)
+        const centerX = bounds.width / 2;
+        const centerY = bounds.height / 2;
+        const percentX = (mouseX - centerX) / centerX;
+        const percentY = (mouseY - centerY) / centerY;
+
+        const rotateX = (percentY * -12).toFixed(2);
+        const rotateY = (percentX * 12).toFixed(2);
+
+        card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isHovered = false;
+        card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+
+      // Mobile DeviceOrientation gyroscope tilt
+      if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
+        window.addEventListener('deviceorientation', (e) => {
+          if (isHovered || !e.gamma || !e.beta) return;
+          const tiltX = Math.min(Math.max(e.gamma, -20), 20) * 0.4;
+          const tiltY = Math.min(Math.max(e.beta - 45, -20), 20) * 0.4;
+          card.style.transform = `perspective(1200px) rotateX(${-tiltY.toFixed(2)}deg) rotateY(${tiltX.toFixed(2)}deg) scale3d(1.01, 1.01, 1.01)`;
+        });
+      }
     })();
   </script>
 </body>
