@@ -9,10 +9,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Google Fonts: Playfair Display / Cormorant Garamond for luxury titles + Montserrat for body text -->
+  <!-- Google Fonts: Playfair Display / Cormorant Garamond for luxury titles + Plus Jakarta Sans & Montserrat for body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,7 +37,7 @@
           fontFamily: {
             serif: ['"Playfair Display"', '"Cormorant Garamond"', 'serif'],
             display: ['"Cormorant Garamond"', 'serif'],
-            sans: ['Montserrat', 'system-ui', 'sans-serif']
+            sans: ['"Plus Jakarta Sans"', 'Montserrat', 'system-ui', 'sans-serif']
           },
           animation: {
             'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -68,7 +68,7 @@
     body {
       background-color: #062428;
       color: #F7F4EE;
-      font-family: 'Montserrat', system-ui, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Montserrat', system-ui, sans-serif;
       overflow-x: hidden;
     }
 
@@ -79,28 +79,43 @@
                   radial-gradient(circle at 90% 60%, rgba(10, 58, 64, 0.6) 0%, transparent 60%);
     }
 
+    /* Frosted Glass Base Token (.glass-panel) */
+    .glass-panel {
+      background: rgba(10, 58, 64, 0.45);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
     /* Glass Cards */
     .glass-card {
       background: rgba(10, 58, 64, 0.45);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
     }
     
     .glass-card-hover {
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card-hover:hover {
       background: rgba(10, 58, 64, 0.65);
-      border-color: rgba(255, 158, 27, 0.4);
+      border-color: rgba(255, 158, 27, 0.45);
       transform: translateY(-4px);
-      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(230, 138, 0, 0.15);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(230, 138, 0, 0.18);
     }
 
     .glass-gold-card {
       background: linear-gradient(145deg, rgba(255, 158, 27, 0.12) 0%, rgba(10, 58, 64, 0.65) 100%);
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
       border: 1px solid rgba(255, 158, 27, 0.35);
+      box-shadow: inset 0 0 16px rgba(212, 175, 55, 0.18), 0 12px 36px rgba(0, 0, 0, 0.35);
+      border-radius: 24px;
     }
 
     /* Text Gradients */
@@ -172,10 +187,18 @@
 </head>
 <body class="relative selection:bg-brand-amber selection:text-brand-tealDark pb-20 md:pb-0">
 
-  <!-- Ambient Golden and Teal Radial Backdrops -->
+  <!-- Ambient Festive Lights / Aurora Backdrop -->
   <div class="fixed inset-0 ambient-aurora pointer-events-none -z-10"></div>
-  <div class="fixed -top-40 -left-40 w-96 h-96 bg-brand-amber/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/2 -right-40 w-[500px] h-[500px] bg-brand-tealDeep/50 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+
+  <!-- Ambient Glow & Light Orbs (3 atmospheric spheres per design standards) -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden" aria-hidden="true">
+    <!-- 1. Warm Golden Christmas Market Orb -->
+    <div class="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-[#F59E0B] opacity-[0.14] blur-[100px]"></div>
+    <!-- 2. Deep Pine Evergreen Orb -->
+    <div class="absolute top-[35%] -right-40 w-[580px] h-[580px] rounded-full bg-[#10B981] opacity-[0.10] blur-[110px]"></div>
+    <!-- 3. European Frost Blue Orb -->
+    <div class="absolute top-[70%] left-[10%] w-[500px] h-[500px] rounded-full bg-[#3B82F6] opacity-[0.10] blur-[100px]"></div>
+  </div>
 
   <!-- Subtle Festive Snow Canvas / Overlay -->
   <div class="snow-container" id="snowContainer" aria-hidden="true"></div>
@@ -261,10 +284,16 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-4xl mx-auto">
-          <!-- Urgency & Exclusivity Badge -->
-          <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full bg-brand-amber/10 border border-brand-amber/35 text-brand-amber text-[10px] sm:text-sm font-bold tracking-wide uppercase shadow-lg shadow-brand-amber/10 mb-4 sm:mb-6 animate-pulse-slow max-w-full text-center leading-tight">
-            <span>🎄</span>
-            <span>ЭКСКЛЮЗИВНЫЙ АВТОРСКИЙ ТУР В МИНИ-ГРУППЕ | 12–20 ДЕКАБРЯ</span>
+          <!-- Urgency & Visa Deadline Badges -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-5 sm:mb-7 max-w-full">
+            <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-brand-amber/15 border border-brand-amber/35 text-brand-amber text-[10px] sm:text-xs font-bold tracking-wide uppercase shadow-lg shadow-brand-amber/10 text-center leading-tight">
+              <span>🎄</span>
+              <span>ЭКСКЛЮЗИВНЫЙ АВТОРСКИЙ ТУР | 12–20 ДЕКАБРЯ</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-200 text-[10px] sm:text-xs font-bold tracking-wide shadow-lg shadow-amber-500/10 text-center leading-tight">
+              <span>⚡</span>
+              <span>Шенгенская виза: запись открыта. Прием документов до 20 октября для гарантированного вылета</span>
+            </div>
           </div>
 
           <!-- Main H1 Offer -->
@@ -322,46 +351,40 @@
 
           </div>
 
-          <!-- Hero Price Card (First Screen Offer) -->
-          <div class="max-w-xl mx-auto rounded-3xl glass-gold-card p-4 sm:p-8 shadow-2xl relative mt-4">
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 bg-gradient-to-r from-red-600 to-brand-amber text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded-full shadow-md text-center max-w-[92%] truncate">
-              🔥 Спеццена для первых 3 участников — экономия 150 €
+          <!-- Hero Frictionless CTA (No upfront price barrier, smooth engagement) -->
+          <div class="max-w-2xl mx-auto rounded-3xl glass-panel p-5 sm:p-7 shadow-2xl relative mt-4 border border-white/20">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+              <!-- Primary CTA: Scroll to Program -->
+              <a 
+                href="#program"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-extrabold text-sm sm:text-base tracking-wide uppercase shadow-xl shadow-brand-amber/30 transition-all duration-300 hover:scale-[1.02] active:scale-95 animate-goldGlow text-center min-h-[48px]"
+              >
+                <span>Узнать подробнее про тур</span>
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+              </a>
+
+              <!-- Secondary / Soft CTA: WhatsApp Direct Question -->
+              <a 
+                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%82%D1%83%D1%80%D1%83%20%D0%B2%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%83"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-xs sm:text-sm tracking-wide transition-all duration-200 active:scale-95 min-h-[48px]"
+              >
+                <svg class="w-4 h-4 text-brand-waGreen fill-current flex-shrink-0" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+                </svg>
+                <span>Консультация в WhatsApp</span>
+              </a>
             </div>
 
-            <div class="flex items-center justify-between gap-3 mt-2 mb-5">
-              <div class="text-left">
-                <div class="text-[10px] sm:text-xs uppercase tracking-wider text-brand-moonLight/60 font-semibold mb-0.5">Стоимость на человека</div>
-                <div class="flex items-baseline gap-2 sm:gap-3">
-                  <span class="text-2xl sm:text-4xl font-extrabold text-white">2 200 €</span>
-                  <span class="text-base sm:text-xl text-brand-moonLight/40 line-through font-medium">2 350 €</span>
-                </div>
-              </div>
-
-              <!-- Available slots badge -->
-              <div class="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-brand-tealDeep/80 border border-brand-amber/30 text-center flex-shrink-0">
-                <span class="text-[9px] sm:text-[11px] uppercase tracking-wider text-brand-amber font-bold block">Осталось мест</span>
-                <span class="text-base sm:text-lg font-extrabold text-white">3 из 8</span>
-              </div>
-            </div>
-
-            <!-- CTA Button with Pulse Effect & Instant WhatsApp Redirect -->
-            <a 
-              href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-extrabold text-xs sm:text-lg tracking-wide uppercase shadow-xl shadow-brand-amber/30 transition-all duration-300 active:scale-95 min-h-[48px] sm:min-h-[54px] animate-goldGlow text-center"
-            >
-              <span>Занять место по спеццене 2 200 €</span>
-              <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
-
-            <div class="mt-3 sm:mt-4 flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-brand-moonLight/70 text-center font-medium">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-amber flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <!-- Microcopy under button -->
+            <div class="mt-3.5 sm:mt-4 flex items-center justify-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-brand-moonLight/75 text-center font-medium">
+              <svg class="w-3.5 h-3.5 text-brand-amber flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span>Официальный договор туроператора · Фиксация на 48 часов</span>
+              <span>Камерная группа 7–8 человек · Полное сопровождение эксперта с 19-летним стажем</span>
             </div>
           </div>
 
@@ -437,6 +460,13 @@
                   в Версаль и на кораблики без предзаказанных групповых тайм-слотов приходится стоять по 1.5–2 часа на ветру.
                 </div>
               </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-400 font-bold text-base mt-0.5">✕</span>
+                <div>
+                  <strong class="text-white font-semibold">Реальный бюджет «дикарем»:</strong>
+                  от 3 100 € на человека из-за пиковых декабрьских цен на отели в центре и поезда TGV в розницу — плюс риск сорвать отпуск из-за задержек и очередей.
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -492,19 +522,81 @@
                   эксперт с высшим образованием и 19 годами опыта решает все логистические вопросы, показывая лучшие секретные локации.
                 </div>
               </li>
+              <li class="flex items-start gap-3">
+                <span class="text-brand-waGreen font-bold text-base mt-0.5">✓</span>
+                <div>
+                  <strong class="text-white font-semibold">Экономия до 900 € и 0% стресса:</strong>
+                  гарантированные групповые тарифы, отели в центрах городов и скоростные экспрессы TGV/Eurostar уже забронированы.
+                </div>
+              </li>
             </ul>
 
             <div class="mt-8 pt-4 border-t border-white/10 text-center">
               <a 
-                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%82%D1%83%D1%80%D1%83%20%D0%B2%20%D0%95%D0%B2%D1%80%D0%BE%D0%BF%D1%83"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 text-brand-amber hover:text-white font-bold text-sm transition-colors"
               >
-                <span>Узнать больше о бронировании в WhatsApp</span>
+                <span>Задать вопрос эксперту в WhatsApp</span>
                 <span class="text-base">→</span>
               </a>
             </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         СЕКЦИЯ 3.5: ВИЗА И АВИАПЕРЕЛЕТ ИЗ КАЗАХСТАНА (Снятие ключевых страхов)
+         ======================================================================== -->
+    <section class="py-14 sm:py-20 relative bg-gradient-to-b from-[#062428] via-[#0A3A40]/40 to-[#062428] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-amber">Безопасность и логистика</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 mb-3">
+            Виза и авиаперелёт из Казахстана
+          </h2>
+          <p class="text-xs sm:text-base text-brand-moonLight/80">
+            Никаких бессонных ночей над анкетами и риска остаться без билетов. Все ключевые вопросы решает туроператор.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          
+          <!-- Card 1: Schengen Visa -->
+          <div class="rounded-3xl p-6 sm:p-8 glass-panel border border-brand-amber/30 hover:border-brand-amber/60 shadow-xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-amber/15 border border-brand-amber/30 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              🛡️
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-amber/15 text-brand-amber text-xs font-bold uppercase tracking-wider mb-3">
+              🛡️ 100% визовое сопровождение ТОО «ТурСалон»
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-3">
+              Шенгенская виза без очередей и отказов
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-moonLight/85 leading-relaxed">
+              «Вам не нужно разбираться в тонкостях визовых анкет Франции или Швейцарии. Мы готовим полный пакет документов, выкупаем необходимые брони и записываем вас на подачу в Астане. Сопровождаем лично до момента получения паспорта».
+            </p>
+          </div>
+
+          <!-- Card 2: Flights -->
+          <div class="rounded-3xl p-6 sm:p-8 glass-panel border border-brand-amber/30 hover:border-brand-amber/60 shadow-xl relative overflow-hidden group">
+            <div class="w-12 h-12 rounded-2xl bg-brand-amber/15 border border-brand-amber/30 flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform">
+              ✈️
+            </div>
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-amber/15 text-brand-amber text-xs font-bold uppercase tracking-wider mb-3">
+              ✈️ Прямой подбор и стыковки из Астаны и Алматы
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-3">
+              Авиабилеты под даты маршрута
+            </h3>
+            <p class="text-xs sm:text-sm text-brand-moonLight/85 leading-relaxed">
+              «Перелет не привязан жестко к стоимости тура, чтобы вы могли выбрать удобный класс и город вылета. Нина Шаханова лично подбирает оптимальные рейсы под тайминг группы (прилет в Базель 12 декабря, вылет из Амстердама 20 декабря) и помогает с оформлением билетов».
+            </p>
           </div>
 
         </div>
@@ -978,10 +1070,42 @@
 
             </div>
 
-            <!-- Quote Block -->
-            <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-amber/15 to-transparent border-l-4 border-brand-amber italic text-brand-moonLight text-sm sm:text-base leading-relaxed">
-              «Я собрала этот маршрут так, как делаю это для своей семьи: без изнурительных автобусов, без спешки, с красивыми скоростными поездами и лучшими рождественскими ярмарками».
-              <div class="not-italic text-xs font-bold text-white mt-2 uppercase tracking-wider">— Нина Шаханова</div>
+            <!-- Quote Block from Nina Shakhanova -->
+            <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-brand-amber/15 via-white/[0.03] to-transparent border-l-4 border-brand-amber text-brand-moonLight text-sm sm:text-base leading-relaxed mb-6 shadow-lg">
+              <p class="italic">
+                «За 19 лет работы в туризме я объездила десятки стран, но рождественская Европа — это совершенно особое состояние души. Я составила этот маршрут так, чтобы вы не тратили ни одной минуты на вокзальную суету, тяжелые ночные переезды и поиск нужного пути. Вы просто наслаждаетесь сказкой, глинтвейном и огнями городов, а всю логистику я беру на себя. Позвоните или напишите мне — я лично отвечу на любые вопросы по поездке».
+              </p>
+              <div class="not-italic text-xs font-bold text-white mt-3 uppercase tracking-wider flex flex-wrap items-center gap-2">
+                <span class="text-brand-amber font-extrabold">— Нина Шаханова</span>
+                <span class="text-brand-moonLight/60">· основатель ТОО «ТурСалон», опыт в туризме с 2007 года</span>
+              </div>
+            </div>
+
+            <!-- Direct Contact Actions (Direct Phone Call + WhatsApp) -->
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              <!-- Phone CTA -->
+              <a 
+                href="tel:+77772796962"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-extrabold text-sm tracking-wide shadow-lg shadow-brand-amber/25 transition-all duration-200 active:scale-95 text-center min-h-[46px]"
+              >
+                <svg class="w-4 h-4 flex-shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+                </svg>
+                <span>📞 Позвонить напрямую: +7 777 279 69 62</span>
+              </a>
+
+              <!-- WhatsApp CTA -->
+              <a 
+                href="https://wa.me/77772796962?text=%D0%9D%D0%B8%D0%BD%D0%B0,%20%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D1%82%D1%8C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8%20%D0%BF%D0%BE%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%D1%83%20%D1%82%D1%83%D1%80%D1%83"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-waGreen/25 transition-all duration-200 active:scale-95 text-center min-h-[46px]"
+              >
+                <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
+                </svg>
+                <span>Написать Нине в WhatsApp</span>
+              </a>
             </div>
 
           </div>
@@ -1010,12 +1134,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto items-stretch">
           
           <!-- Left: Everything Included Stack (8 cols) -->
-          <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#0A3A40]/80 to-[#062428] border-2 border-brand-amber/50 shadow-2xl flex flex-col justify-between">
+          <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#0A3A40]/90 to-[#062428] border-2 border-brand-amber/50 shadow-2xl flex flex-col justify-between relative overflow-hidden" style="box-shadow: inset 0 0 16px rgba(212, 175, 55, 0.18), 0 12px 36px rgba(0, 0, 0, 0.4);">
+            <!-- Scarcity Badge on top corner -->
+            <div class="absolute top-0 right-0 px-4 py-1.5 bg-gradient-to-r from-red-600 to-brand-amber text-white text-[11px] font-extrabold uppercase tracking-wider rounded-bl-2xl shadow-md">
+              Осталось мест: 3 из 8
+            </div>
+
             <div>
               <div class="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/15">
                 <div>
                   <h3 class="text-xl sm:text-2xl font-bold text-white">Всё включено в стоимость тура</h3>
-                  <p class="text-xs text-brand-amber font-semibold mt-0.5">Тариф: 2 200 € (спеццена) / 2 350 € (стандарт)</p>
+                  <p class="text-xs text-brand-amber font-semibold mt-0.5">Спеццена 2 200 € (вместо 2 350 €)</p>
                 </div>
                 <span class="text-2xl">✨</span>
               </div>
@@ -1056,20 +1185,31 @@
               </ul>
             </div>
 
-            <div class="mt-8 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <span class="text-xs text-brand-moonLight/60 block">Специальная цена для первых 3 участников:</span>
-                <span class="text-2xl font-extrabold text-white">2 200 €</span>
-                <span class="text-sm line-through text-brand-moonLight/40 ml-2">2 350 €</span>
+            <div class="mt-8 pt-5 border-t border-white/15">
+              <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-3">
+                <div>
+                  <span class="text-xs text-brand-moonLight/70 block">Специальная цена для первых 3 участников:</span>
+                  <div class="flex items-baseline gap-2">
+                    <span class="text-3xl font-extrabold text-white">2 200 €</span>
+                    <span class="text-base line-through text-brand-moonLight/40">2 350 €</span>
+                    <span class="text-xs font-bold text-brand-amber ml-1">(-150 €)</span>
+                  </div>
+                </div>
+                <a 
+                  href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-brand-amber to-brand-amberDeep hover:from-amber-400 hover:to-brand-amber text-[#062428] font-extrabold text-sm sm:text-base tracking-wide uppercase shadow-xl shadow-brand-amber/30 transition-all duration-300 hover:scale-[1.02] active:scale-95 text-center min-h-[50px] animate-goldGlow"
+                >
+                  <span>Забронировать место · 2 200 €</span>
+                  <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
               </div>
-              <a 
-                href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="px-6 py-3 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white font-bold text-sm shadow-lg shadow-brand-waGreen/25 transition-all"
-              >
-                Забронировать место в WhatsApp
-              </a>
+              <p class="text-[11px] sm:text-xs text-brand-moonLight/60 text-center sm:text-left">
+                Официальный договор туроператора · Фиксация спеццены на 48 часов
+              </p>
             </div>
           </div>
 
@@ -1251,7 +1391,7 @@
             <svg class="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
             </svg>
-            <span>Забронировать место в WhatsApp с Ниной (+7 777 279 69 62) →</span>
+            <span>Забронировать место · 2 200 € в WhatsApp с Ниной →</span>
           </a>
           <span class="text-xs text-brand-moonLight/60 mt-3 block">
             Прямой диалог с организатором · Без посредников · Ответ в течение 10 минут
@@ -1369,28 +1509,30 @@
   <!-- ========================================================================
        STICKY BOTTOM CONVERSION BAR FOR MOBILE (Mobile-First Thumb-Zone UX)
        ======================================================================== -->
-  <aside aria-label="Быстрое бронирование тура" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#062428]/95 backdrop-blur-md border-t border-brand-amber/35 px-4 py-3 shadow-[0_-8px_25px_rgba(0,0,0,0.5)]">
-    <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
-      <div>
-        <div class="text-[10px] font-bold uppercase tracking-wider text-brand-amber leading-none flex items-center gap-1">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-amber inline-block"></span>
-          <span>Осталось 3 места</span>
-        </div>
-        <div class="flex items-baseline gap-1.5 mt-1">
-          <span class="text-xl font-extrabold text-white leading-none">2 200 €</span>
-          <span class="text-xs text-brand-moonLight/40 line-through">2 350 €</span>
-        </div>
-      </div>
+  <aside aria-label="Быстрое бронирование тура" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#062428]/95 backdrop-blur-md border-t border-brand-amber/35 px-3 py-2.5 shadow-[0_-8px_25px_rgba(0,0,0,0.6)]">
+    <div class="flex items-center justify-between gap-2 max-w-lg mx-auto">
+      <!-- Direct Call Button -->
+      <a 
+        href="tel:+77772796962"
+        class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/10 border border-white/20 text-white flex-shrink-0 active:scale-95 transition-transform"
+        title="Позвонить напрямую"
+      >
+        <svg class="w-5 h-5 text-brand-amber" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+        </svg>
+      </a>
+
+      <!-- WhatsApp Booking CTA -->
       <a 
         href="https://wa.me/77772796962?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%B2%20%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D1%82%D1%83%D1%80%D0%B5%20%D0%BF%D0%BE%20%D1%81%D0%BF%D0%B5%D1%86%D1%86%D0%B5%D0%BD%D0%B5%202200%E2%82%AC" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white text-xs font-extrabold tracking-wide uppercase shadow-lg shadow-brand-waGreen/30 active:scale-95 transition-all min-h-[44px]"
+        class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-brand-waGreen hover:bg-brand-waHover text-white text-xs font-extrabold tracking-wide uppercase shadow-lg shadow-brand-waGreen/30 active:scale-95 transition-all min-h-[44px]"
       >
         <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
           <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.7c.974.553 1.95.845 2.791.845 3.181 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.77-5.767-5.77zm3.393 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.08-2.096-.505-1.745-.724-2.859-2.505-2.946-2.62-.088-.116-.697-.93-.697-1.773 0-.843.438-1.258.594-1.432.156-.175.341-.219.455-.219.114 0 .228.001.328.007.105.006.246-.04.385.295.144.348.491 1.2.534 1.288.043.088.072.19.014.305-.058.115-.088.188-.175.29-.088.102-.185.228-.264.307-.088.087-.18.182-.077.359.102.176.455.75 1.012 1.246.717.639 1.32.837 1.507.925.188.088.298.073.407-.058.11-.13.469-.545.594-.733.125-.188.25-.157.422-.094.172.063 1.092.515 1.279.608.187.094.312.14.359.219.047.078.047.452-.097.857z"/>
         </svg>
-        <span>Занять место</span>
+        <span>Забронировать · 2 200 €</span>
       </a>
     </div>
   </aside>
