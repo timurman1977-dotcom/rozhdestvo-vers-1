@@ -1,1 +1,11 @@
 .vercel
+node_modules
+shot_*.png
+crop_*.png
+screenshot*.png
+full_page*.png
+debug_*.js
+take_*.js
+check_*.js
+find_*.js
+crop*.ps1
